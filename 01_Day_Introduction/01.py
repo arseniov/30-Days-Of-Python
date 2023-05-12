@@ -19,5 +19,5 @@ print({
     "skills":["React","JS","Python"]
 })
 
-print("{3,4,1,6} is " & type(5))
+print("{3,4,1,6} is",type(5))
 
