@@ -35,7 +35,7 @@ diff = num_two - num_one
 product = num_one * num_two
 division = num_one / num_two
 remainder = num_one // num_two
-exp = num_one ^ num_two
+exp = num_one ** num_two
 floor_division = num_one % num_two
 
 radius = 30
