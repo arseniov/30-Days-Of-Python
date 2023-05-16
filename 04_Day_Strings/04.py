@@ -78,62 +78,70 @@ print(company.replace("coding","Python"))
 print(company.replace("coding","Everyone"))
 
 # Split the string 'Coding For All' using space as the separator (split()) .
-
+print(company.split(" "))
 
 # "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma.
-
+print("Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon".split(","))
 
 # What is the character at index 0 in the string Coding For All.
-
+print(company[0])
 
 # What is the last index of the string Coding For All.
-
+print(company[-1])
 
 # What character is at index 10 in "Coding For All" string.
-
+print(company[10])
 
 # Create an acronym or an abbreviation for the name 'Python For Everyone'.
-
+pfe = "Python For Everyone"
 
 # Create an acronym or an abbreviation for the name 'Coding For All'.
-
+cfa = "Coding For All"
 
 # Use index to determine the position of the first occurrence of C in Coding For All.
-
+print(cfa.index("C"))
 
 # Use index to determine the position of the first occurrence of F in Coding For All.
-
+print(cfa.index("F"))
 
 # Use rfind to determine the position of the last occurrence of l in Coding For All People.
-
+print("Coding For All People".rfind("l"))
 
 # Use index or find to find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-
+print("You cannot end a sentence with because because because is a conjunction".find("because"))
+print("You cannot end a sentence with because because because is a conjunction".index("because"))
+print("You cannot end a sentence with because because because is a conjunction"[::-1].rfind("because"[::-1]))
+print("You cannot end a sentence with because because because is a conjunction"[::-1].rindex("because"[::-1]))
 
 # Use rindex to find the position of the last occurrence of the word because in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-
+print("You cannot end a sentence with because because because is a conjunction".rindex("because"))
 
 # Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-
+snt = "You cannot end a sentence with because because because is a conjunction"
+print(snt.replace("because because because ",""))
 
 # Find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-
+print("You cannot end a sentence with because because because is a conjunction".index("because"))
+print("You cannot end a sentence with because because because is a conjunction".find("because"))
 
 # Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
 
 
 # Does ''Coding For All' start with a substring Coding?
-
+print("Coding For All".startswith("Coding"))
+print("Coding For All".startswith("coding") is True)
 
 # Does 'Coding For All' end with a substring coding?
-
+print("Coding For All".endswith("Coding"))
 
 # '   Coding For All      '  , remove the left and right trailing spaces in the given string.
-
+print(("   Coding For All      ".strip()).title())
 
 # Which one of the following variables return True when we use the method isidentifier():
 # 30DaysOfPython
 # thirty_days_of_python
-
+print("30DaysOfPython".isidentifier())
+print("thirty_days_of_python".isidentifier())
 
 # The following list contains the names of some of python libraries: ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Join the list with a hash with space string.
+print(" ".join(['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']))
