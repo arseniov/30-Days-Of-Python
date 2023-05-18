@@ -28,32 +28,50 @@ print("With remove the item must be a member otherwise it throws an error.\n"
 
 # Exercises: Level 2
 # Join A and B
-
+A.update(B)
+print(A)
+C = A.union(B)
+print(C)
 
 # Find A intersection B
-
+print(A.intersection(B))
 
 # Is A subset of B
-
+print(A.issubset(B))
 
 # Are A and B disjoint sets
-
+print(A.isdisjoint(B))
 
 # Join A with B and B with A
-
+A.update(B)
+print(A)
+C = A.union(B)
+print(C)
 
 # What is the symmetric difference between A and B
-
+D = A.symmetric_difference(B)
+print(D)
 
 # Delete the sets completely
-
+del A, B, C, D
 
 
 # Exercises: Level 3
 # Convert the ages to a set and compare the length of the list and the set, which one is bigger?
-
+lst = list(age)
+print(lst)
+print(len(lst))
+print(len(age))
+print(len(lst) is len(age))
 
 # Explain the difference between the following data types: string, list, tuple and set
-
+print("string: set of alphanumeric characters\n"
+    +"")
 
 # I am a teacher and I love to inspire and teach people. How many unique words have been used in the sentence? Use the split methods and set to get the unique words.
+sentence = "I am a teacher and I love to inspire and teach people"
+sentence_list = list(sentence.split(" "))
+print(len(sentence_list))
+sentence_set = set(sentence.split(" "))
+print(sentence_set)
+print(len(sentence_set))
