@@ -54,14 +54,48 @@ else:
 # # 60-69, C
 # # 50-59, D
 # # 0-49, F
+a_min = 90
+a_max = 100
+b_min = 70
+b_max = 89
+c_min = 60
+c_max = 69
+d_min = 50
+d_max = 59
+f_min = 0
+f_max = 49
 
+score = int(input("Enter your score: "))
+
+if score <= 100 and score >= 90:
+    print("Your grade is A")
+elif score <= 89 and score >= 70:
+    print("Your grade is B")
+elif score <= 69 and score >= 60:
+    print("Your grade is C")
+elif score <= 59 and score >= 50:
+    print("Your grade is D")
+elif score <= 49 and score >= 0:
+    print("Your grade is F")
 
 # Check if the season is Autumn, Winter, Spring or Summer. If the user input is: September, October or November, the season is Autumn. December, January or February, the season is Winter. March, April or May, the season is Spring June, July or August, the season is Summer
+month = input("Write a month: ")
+if month in ["September", "October", "November"]:
+    print("Season is Autumn")
+elif month in ["December", "January", "February"]:
+    print("Season is Winter")
+elif month in ["March", "April", "May"]:
+    print("Season is Spring")
+elif month in ["June", "July", "August"]:
+    print("Season is Summer")
+else:
+    print(f"{month} is not a valid month name")
 
 
 # The following list contains some fruits:
 # # fruits = ['banana', 'orange', 'mango', 'lemon']
 # If a fruit doesn't exist in the list add the fruit to the list and print the modified list. If the fruit exists print('That fruit already exist in the list')
+fruits = ['banana', 'orange', 'mango', 'lemon']
 
 
 
