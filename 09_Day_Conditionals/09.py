@@ -132,10 +132,28 @@ person={
     'last_name': 'Yetayeh',
     'age': 250,
     'country': 'Finland',
-    'is_marred': True,
+    'is_married': True,
     'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
     'address': {
         'street': 'Space street',
         'zipcode': '02210'
     }
     }
+middle = int(len(person)/2) - 1
+print(person["skills"][int(len(person)/2) - 1]) if "skills" in person and len(person["skills"]) > 1 else print("Skills is not present")
+
+print(person["skills"][list(person["skills"]).index("Python")]) if "skills" in person and "Python" in person["skills"] else print("Python is not in skills list")
+
+print(list(person["skills"]).index("Python")) if "skills" in person and "Python" in person["skills"] else print("Python is not in skills list")
+
+if "JavaScript" and "React" and not "Node" and not "Python" and not "MongoDB" in person["skills"]:
+    print("He is a front end developer")
+elif "Node" and "Python" and "MongoDB" and not "JavaScript" and not "React" in person["skills"]:
+    print("He is a backend developer")
+elif "React" and "Node" and "MongoDB" and not "JavaScript" and not "Python" in person["skills"]:
+    print("He is a fullstack developer")
+else:
+    print("Unknown title")
+
+ismarried = "is" if person["is_married"] == True else "is not"
+print(person["first_name"] + f" " + person["last_name"] + f"lives in " + person["country"] + f". He " + ismarried + f" married")
