@@ -96,7 +96,13 @@ else:
 # # fruits = ['banana', 'orange', 'mango', 'lemon']
 # If a fruit doesn't exist in the list add the fruit to the list and print the modified list. If the fruit exists print('That fruit already exist in the list')
 fruits = ['banana', 'orange', 'mango', 'lemon']
-
+for i in (1,3):
+    new_fruit = input("New fruit? ")
+    if new_fruit in fruits:
+        print("This fruit is already in the list")
+    else:
+        fruits.append(new_fruit)
+        print(fruits)
 
 
 # Exercises: Level 3
@@ -120,3 +126,16 @@ fruits = ['banana', 'orange', 'mango', 'lemon']
 # #  * If a person skills has only JavaScript and React, print('He is a front end developer'), if the person skills has Node, Python, MongoDB, print('He is a backend developer'), if the person skills has React, Node and MongoDB, Print('He is a fullstack developer'), else print('unknown title') - for more accurate results more conditions can be nested!
 # #  * If the person is married and if he lives in Finland, print the information in the following format:
 # #     Asabeneh Yetayeh lives in Finland. He is married.
+
+person={
+    'first_name': 'Asabeneh',
+    'last_name': 'Yetayeh',
+    'age': 250,
+    'country': 'Finland',
+    'is_marred': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
+    }
+    }
