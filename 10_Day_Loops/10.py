@@ -76,48 +76,52 @@
 
 # Iterate through the list, ['Python', 'Numpy','Pandas','Django', 'Flask'] using a for loop and print out the items.
 
-lst = ['Python', 'Numpy','Pandas','Django', 'Flask']
-for item in lst:
-    print(item)
+# lst = ['Python', 'Numpy','Pandas','Django', 'Flask']
+# for item in lst:
+#     print(item)
 
 
 # Use for loop to iterate from 0 to 100 and print only even numbers
 
-for i in range(0,100,2):
-    print(i)
+# for i in range(0,100,2):
+#     print(i)
 
 # Use for loop to iterate from 0 to 100 and print only odd numbers
-for l in range(1,100,2):
-    print(l)
+# for l in range(1,100,2):
+#     print(l)
 
 
 
 # Exercises: Level 2
 # Use for loop to iterate from 0 to 100 and print the sum of all numbers.
 # # The sum of all numbers is 5050.
-sumall =  0
-for m in range(0,101):
-    sumall = sumall + m
-    print(sumall)
+# sumall =  0
+# for m in range(0,101):
+#     sumall = sumall + m
+#     print(sumall)
 
 # Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
 # # The sum of all evens is 2550. And the sum of all odds is 2500.
-sumall_even = 0
-sumall_odd = 0
-for n in range(0,101):
-    if (n % 2) == 0:
-        sumall_even = sumall_even + n
-    else:
-        sumall_odd = sumall_odd + n
+# sumall_even = 0
+# sumall_odd = 0
+# for n in range(0,101):
+#     if (n % 2) == 0:
+#         sumall_even = sumall_even + n
+#     else:
+#         sumall_odd = sumall_odd + n
 
-print("Sum of even numbers is", sumall_even)
-print("Sum of all odd numbers is", sumall_odd)
+# print("Sum of even numbers is", sumall_even)
+# print("Sum of all odd numbers is", sumall_odd)
 
 
 
 # Exercises: Level 3
 # Go to the data folder and use the countries.py file. Loop through the countries and extract all the countries containing the word land.
 
+from countries import countries_names
+
+for country in countries_names:
+    print(country)
 
 # This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
 
