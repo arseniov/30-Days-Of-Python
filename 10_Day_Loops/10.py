@@ -118,13 +118,17 @@
 # Exercises: Level 3
 # Go to the data folder and use the countries.py file. Loop through the countries and extract all the countries containing the word land.
 
-from countries import countries_names
+from countries import countries
 
-for country in countries_names:
+for country in countries:
     print(country)
 
 # This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
 
+fruits = ['banana', 'orange', 'mango', 'lemon']
+
+for fruit in fruits[::-1]:
+    print(fruit)
 
 # Go to the data folder and use the countries_data.py file.
 # # What are the total number of languages in the data
