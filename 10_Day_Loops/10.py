@@ -2754,22 +2754,28 @@ countries_data = [
     }
 ]
 
-languages1 = set()
+langs_list = list()
 
 for country_data in countries_data:
-    print(country_data["languages"])
+    # print(country_data["languages"])
     for language in country_data["languages"]:
-        languages1.add(language)
+        langs_list.append(language)
 
-print("languages1", languages1)
-print("languages1 len", len(languages1))
+langs_uniques = set(langs_list)
+
+print("langs_uniques", langs_uniques)
+print("langs_uniques len", len(langs_uniques))
 
 # # Find the ten most spoken languages from the data
 
+popular_langs = []
+for lang in langs_uniques:
+    print(lang)
+    lang_count = langs_list.count(lang)
+    print(lang_count)
+    popular_langs.append({"language": lang, "count": lang_count})
 
 
-
-print("languages2:", languages2)
 
 
 
