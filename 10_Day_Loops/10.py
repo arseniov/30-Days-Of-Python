@@ -2754,30 +2754,41 @@ countries_data = [
     }
 ]
 
-langs_list = list()
+# langs_list = list()
 
-for country_data in countries_data:
-    # print(country_data["languages"])
-    for language in country_data["languages"]:
-        langs_list.append(language)
+# for country_data in countries_data:
+#     # print(country_data["languages"])
+#     for language in country_data["languages"]:
+#         langs_list.append(language)
 
-langs_uniques = set(langs_list)
+# langs_uniques = set(langs_list)
 
-print("langs_uniques", langs_uniques)
-print("langs_uniques len", len(langs_uniques))
+# print("langs_uniques", langs_uniques)
+# print("langs_uniques len", len(langs_uniques))
 
 # # Find the ten most spoken languages from the data
 
-popular_langs = []
-for lang in langs_uniques:
-    print(lang)
-    lang_count = langs_list.count(lang)
-    print(lang_count)
-    popular_langs.append({"language": lang, "count": lang_count})
+# popular_langs = {}
+# for lang in langs_uniques:
+#     # print(lang)
+#     lang_count = langs_list.count(lang)
+#     # print(lang_count)
+#     popular_langs[lang] = lang_count
+
+# print(popular_langs)
+# popular_langs_sorted = dict(sorted(popular_langs.items(), key=(lambda x: x[1]), reverse=True)[:10])
+# print(popular_langs_sorted)
+
+# print("The 10 most common languages are", popular_langs_sorted)
 
 
+# # # Find the 10 most populated countries in the world
 
+populated_countries = {}
+for country_data in countries_data:
+    # print(country_data["name"], country_data["population"])
+    populated_countries[country_data["name"]] = country_data["population"]
 
-
-# # Find the 10 most populated countries in the world
-
+populated_countries_sorted = dict(sorted(populated_countries.items(), key=(lambda x: x[1]), reverse=True)[:10])
+# print(populated_countries_sorted)
+print("The 10 most populated countries are", populated_countries_sorted)
