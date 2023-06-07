@@ -62,13 +62,13 @@
 #    {'country': 'SWEDEN', 'city': 'STOCKHOLM'},
 #    {'country': 'NORWAY', 'city': 'OSLO'}]
 #    ```
-countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
-list_of_dict = []
-# list_of_dict.append({"country": [data for sublist in [data for sublist in countries for data in sublist] for data in sublist], "city": "dsad"})
-list_of_dict = [{"country": {data[0] for data in sublist}, "city": [data[1] for data in sublist]} for sublist in countries]
+# countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
+# list_of_dict = []
+# # list_of_dict.append({"country": [data for sublist in [data for sublist in countries for data in sublist] for data in sublist], "city": "dsad"})
+# list_of_dict = [{"country": [data[0] for data in sublist], "city": [data[1] for data in sublist]} for sublist in countries]
 
 
-print(list_of_dict)
+# print(list_of_dict)
 
 # 6. Change the following list of lists to a list of concatenated strings:
 #    ```py
@@ -76,7 +76,16 @@ print(list_of_dict)
 #    output
 #    ['Asabeneh Yetaeyeh', 'David Smith', 'Donald Trump', 'Bill Gates']
 #    ```
-
+names = [[('Asabeneh', 'Yetayeh')], [('David', 'Smith')], [('Donald', 'Trump')], [('Bill', 'Gates')]]
+list_of_strings = list()
+concatenated = list()
+list_of_strings = [person for sublist in names for person in sublist]
+print(list_of_strings)
+for person in list_of_strings:
+    name = person[0]
+    last_name = person[1]
+    concatenated.append(name + " " + last_name)
+print(concatenated)
 
 
 # 7. Write a lambda function which can solve a slope or y-intercept of linear functions.
