@@ -49,10 +49,10 @@
 #    output:
 #    [['FINLAND','FIN', 'HELSINKI'], ['SWEDEN', 'SWE', 'STOCKHOLM'], ['NORWAY', 'NOR', 'OSLO']]
 #    ```
-countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
+# countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
 
-flattened = [country for row in [country for row in countries for country in row] for country in row]
-print(flattened)
+# flattened = [country for row in [country for row in countries for country in row] for country in row]
+# print(flattened)
 
 # 5. Change the following list to a list of dictionaries:
 #    ```py
@@ -63,7 +63,11 @@ print(flattened)
 #    {'country': 'NORWAY', 'city': 'OSLO'}]
 #    ```
 countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
-list_of_dict = [{"country": [country for row in countries for country in row][0], "city": "dsad"}]
+list_of_dict = []
+# list_of_dict.append({"country": [data for sublist in [data for sublist in countries for data in sublist] for data in sublist], "city": "dsad"})
+list_of_dict = [{"country": {data[0] for data in sublist}, "city": [data[1] for data in sublist]} for sublist in countries]
+
+
 print(list_of_dict)
 
 # 6. Change the following list of lists to a list of concatenated strings:
@@ -72,6 +76,7 @@ print(list_of_dict)
 #    output
 #    ['Asabeneh Yetaeyeh', 'David Smith', 'Donald Trump', 'Bill Gates']
 #    ```
+
 
 
 # 7. Write a lambda function which can solve a slope or y-intercept of linear functions.
