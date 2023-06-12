@@ -1,10 +1,10 @@
 # ## 💻 Exercises: Day 14
 
 # ```py
-countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
-names = ['Asabeneh', 'Lidiya', 'Ermias', 'Abraham']
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-misc = ["Estonia", 4, 1, "Sweden", 9, "Denmark", 3, "Abraham", 5]
+# countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
+# names = ['Asabeneh', 'Lidiya', 'Ermias', 'Abraham']
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# misc = ["Estonia", 4, 1, "Sweden", 9, "Denmark", 3, "Abraham", 5]
 # ```
 
 # ### Exercises: Level 1
@@ -109,19 +109,41 @@ misc = ["Estonia", 4, 1, "Sweden", 9, "Denmark", 3, "Abraham", 5]
 # print(sum)
 
 # 1. Use reduce to concatenate all the countries and to produce this sentence: Estonia, Finland, Sweden, Denmark, Norway, and Iceland are north European countries
-import functools
+# import functools
 
-def concatenate(a, b):
-    return a + ", " + b
+# def concatenate(a, b):
+#     if b == "Iceland":
+#         return a + " and " + b + " are north European countries"
+#     return a + ", " + b
 
-concatenate_countries = functools.reduce(concatenate, countries)
-print(str(concatenate_countries))
+# concatenate_countries = functools.reduce(concatenate, countries)
+# print(str(concatenate_countries))
 
 # 1. Declare a function called categorize_countries that returns a list of countries with some common pattern (you can find the [countries list](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries.py) in this repository as countries.js(eg 'land', 'ia', 'island', 'stan')).
+# from countries import countries
 
+# def categorize_countries(country):
+#     if "stan" in country:
+#         return True
+#     return False
+
+# pattern = filter(categorize_countries, countries)
+# print(list(pattern))
 
 # 1. Create a function returning a dictionary, where keys stand for starting letters of countries and values are the number of country names starting with that letter.
+from countries import countries
 
+def countries_quantity(country):
+    if "stan" in country:
+        dictionary.append(country)
+        return True
+        # i+=1
+    return False
+
+i = 0
+# dictionary = []
+countries_letters = filter(countries_quantity, countries)
+print(dictionary)
 
 # 2. Declare a get_first_ten_countries function - it returns a list of first ten countries from the countries.js list in the data folder.
 
